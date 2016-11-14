@@ -38,7 +38,7 @@ $ sshcrypt decrypt -p "$(sshcrypt agent-decrypt < key.enc)" < secrets.yaml.enc >
 
 You can then store the encrypted `key.enc`, and any files encrypted with it in git, and add the non-encrypted filenames to `.gitignore` to ensure you do not accidentally commit them..
 
-To give other people access to the encrypted files you'll need to meet them on a shared terminal, like tmux, decrypt `key.enc` > `key`, and have them add their encrypted version of the key to `key.enc`.
+To give other people access to the encrypted files you'll need to meet them on a shared machine, decrypt `key.enc` > `key`, and have them add their encrypted version of the key to `key.enc`.
 
 ```
 you  $ sshcrypt agent-decrypt < key.enc > key

@@ -7,7 +7,7 @@ import (
 )
 
 func EncryptWithPassword(password []byte, clearText []byte) (cipherText []byte, err error) {
-	var salt [salt_size]byte
+	var salt [saltSize]byte
 	if _, err := rand.Read(salt[:]); err != nil {
 		return nil, err
 	}
@@ -25,8 +25,8 @@ func EncryptWithPassword(password []byte, clearText []byte) (cipherText []byte, 
 	return append(salt[:], cipherText...), nil
 }
 
-func Encrypt(key *[key_size]byte, clearText []byte) (cipherText []byte, err error) {
-	var nonce [nonce_size]byte
+func Encrypt(key *[keySize]byte, clearText []byte) (cipherText []byte, err error) {
+	var nonce [nonceSize]byte
 	if _, err := rand.Read(nonce[:]); err != nil {
 		return nil, err
 	}

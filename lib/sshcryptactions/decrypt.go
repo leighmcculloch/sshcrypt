@@ -5,7 +5,7 @@ import (
 )
 
 func DecryptWithPassword(password []byte, cipherText []byte) (clearText []byte, ok bool, err error) {
-	var salt [salt_size]byte
+	var salt [saltSize]byte
 	copy(salt[:], cipherText[:16])
 
 	key, err := MakeKey(password, salt[:])
@@ -17,9 +17,9 @@ func DecryptWithPassword(password []byte, cipherText []byte) (clearText []byte, 
 	return clearText, ok, nil
 }
 
-func Decrypt(key *[key_size]byte, cipherText []byte) (clearText []byte, ok bool) {
-	var nonce [nonce_size]byte
-	copy(nonce[:], cipherText[:nonce_size])
-	clearText, ok = secretbox.Open(clearText[:0], cipherText[nonce_size:], &nonce, key)
+func Decrypt(key *[keySize]byte, cipherText []byte) (clearText []byte, ok bool) {
+	var nonce [nonceSize]byte
+	copy(nonce[:], cipherText[:nonceSize])
+	clearText, ok = secretbox.Open(clearText[:0], cipherText[nonceSize:], &nonce, key)
 	return clearText, ok
 }

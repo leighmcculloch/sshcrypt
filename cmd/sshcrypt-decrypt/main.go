@@ -7,8 +7,8 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/leighmcculloch/sshcrypt/lib/sshcryptactions"
-	"github.com/leighmcculloch/sshcrypt/lib/sshcryptdata"
+	"4d63.com/sshcrypt/lib/sshcryptactions"
+	"4d63.com/sshcrypt/lib/sshcryptdata"
 )
 
 var password string

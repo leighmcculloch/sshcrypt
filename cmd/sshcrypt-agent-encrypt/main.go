@@ -8,9 +8,9 @@ import (
 	"os"
 	"strings"
 
-	"github.com/leighmcculloch/sshcrypt/lib/sshcryptactions"
-	"github.com/leighmcculloch/sshcrypt/lib/sshcryptagent"
-	"github.com/leighmcculloch/sshcrypt/lib/sshcryptdata"
+	"4d63.com/sshcrypt/lib/sshcryptactions"
+	"4d63.com/sshcrypt/lib/sshcryptagent"
+	"4d63.com/sshcrypt/lib/sshcryptdata"
 )
 
 const challengeSize = 64

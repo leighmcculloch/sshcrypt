@@ -11,7 +11,7 @@ The status of this project is experimental. See [LICENSE](LICENSE).
 ## Install
 
 ```
-go get github.com/leighmcculloch/sshcrypt/...
+go get 4d63.com/sshcrypt/...
 ```
 
 ## Example

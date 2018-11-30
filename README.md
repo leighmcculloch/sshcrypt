@@ -6,7 +6,7 @@ Works with keys that are being forwarded to a remote host using SSH Agent Forwar
 
 Each encryption uses a random nonce. Each encryption with a signature uses a random challenge that is signed to generate the input to scrypt, along with a randomly generated salt, for generating the key. The random nonce, random challenge, and random salt are stored alongside the encrypted data in the clear. Uses [Golang's implementation of NaCl secret box](https://godoc.org/golang.org/x/crypto/nacl/secretbox).
 
-The status of this project is experimental. See [LICENSE](LICENSE).
+**The status of this project is experimental.** See [LICENSE](LICENSE).
 
 ## Install
 

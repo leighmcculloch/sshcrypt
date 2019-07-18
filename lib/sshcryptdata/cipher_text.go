@@ -25,7 +25,7 @@ func EncodeChallengeCipherText(challenge []byte, cipherText []byte) string {
 func DecodeChallengeCipherText(encodedCipherText string) (challenge []byte, cipherText []byte, err error) {
 	parts := strings.Split(encodedCipherText, " ")
 	if len(parts) != 2 {
-		return nil, nil, errors.New("Encrpted data is invalid format")
+		return nil, nil, errors.New("Encrypted data is invalid format")
 	}
 	challenge, err = base64.StdEncoding.DecodeString(parts[0])
 	if err != nil {

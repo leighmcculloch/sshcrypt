@@ -42,21 +42,18 @@ func main() {
 
 		challenge, cipherText, err := sshcryptdata.DecodeChallengeCipherText(cipherTextPackage)
 		if err != nil {
-			fmt.Println(err)
-			return
+			fail(err)
 		}
 
 		for _, signer := range signers {
 			sig, err := sshcryptactions.Sign(signer, challenge)
 			if err != nil {
-				fmt.Println(err)
-				return
+				fail(err)
 			}
 
 			clearText, ok, err := sshcryptactions.DecryptWithPassword(sig.Blob, cipherText)
 			if err != nil {
-				fmt.Println(err)
-				return
+				fail(err)
 			}
 			if ok {
 				os.Stdout.Write(clearText)

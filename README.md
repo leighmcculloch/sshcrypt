@@ -126,6 +126,10 @@ Success
 
 Note: More than one signature and key can be provided by separating them by new-lines. If more than one signature is provided, success will be returned if at least one signature can be verified with one public key.
 
+## Known Limitations
+
+1. ECDSA keys are known not to work correctly with sshcrypt. ([#7](https://github.com/leighmcculloch/sshcrypt/issues/7))
+
 ## Thanks
 
 Thanks to [@ejcx](https://github.com/ejcx)'s [talk](https://twitter.com/ejcx_/status/732595370136494080) on Crypto in Golang.

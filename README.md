@@ -14,11 +14,6 @@ Each encryption uses a random nonce. Each encryption with a signature uses a ran
 go get 4d63.com/sshcrypt/...
 ```
 
-## ECDSA Keys
-
-ECDSA Private Keys are currently known not to work correctly with sshcrypt.
- 
-
 ## Example
 
 This example encrypts a file using an intermediary key, that is encrypted with an SSH Agent signature.
@@ -130,6 +125,10 @@ Success
 ```
 
 Note: More than one signature and key can be provided by separating them by new-lines. If more than one signature is provided, success will be returned if at least one signature can be verified with one public key.
+
+## Known Limitations
+
+1. ECDSA keys are known not to work correctly with sshcrypt. ([#7](https://github.com/leighmcculloch/sshcrypt/issues/7))
 
 ## Thanks
 

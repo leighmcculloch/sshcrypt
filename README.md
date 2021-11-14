@@ -1,5 +1,7 @@
 # sshcrypt
 
+**This tool has always been experimental and never maintained or intended for real world use. Check out [age](https://age-encryption.org/) instead that [supports encryption via ssh keys](https://twitter.com/FiloSottile/status/1459662674963357702?t=FXFVq-4bTwLxpVmg6sF1ZA&s=19).**
+
 Use the keys in the ssh-agent to encrypt data symmetrically, and sign data.
 
 Works with keys that are being forwarded to a remote host using SSH Agent Forwarding. These applications only use the SSH keys for signing. Encryption is performed by signing a randomly generated challenge and using the signature as the encryption key.
